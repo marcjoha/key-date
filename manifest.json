@@ -1,0 +1,27 @@
+{
+  "name": "KeyDate",
+  "short_name": "key-date",
+  "author": "@marcjoha",
+  "version": "0.1",
+  "description": "Keyboard shortcut to insert current date and a colon (e.g. '2016-08-21: ') wherever the mouse cursor is located",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "insert-key-date": {
+      "suggested_key": { "default": "Ctrl+Shift+X" },
+      "description": "Insert key date"
+    }
+  },
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+  }],
+  "icons": { 
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png" 
+	},
+  "manifest_version": 2
+}
